@@ -1,10 +1,8 @@
-# RubyText
+# RubyText touch version
 
-[![Pub](https://img.shields.io/pub/v/ruby_text.svg)](https://pub.dartlang.org/packages/ruby_text)
 
-A ruby text widget with flutter.
+A ruby text widget with flutter with touch callback.
 
-![](./Screenshot.png)
 
 ## Install
 ```yaml
@@ -38,6 +36,7 @@ const RubyText(
   bool? softWrap,
   TextOverflow? overflow,
   int? maxLines,
+  onPressed
 });
 
 const RubyTextData(

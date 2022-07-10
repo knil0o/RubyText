@@ -118,6 +118,7 @@ class RubyText extends StatelessWidget {
     this.softWrap,
     this.overflow,
     this.maxLines,
+    this.onPressed,
   }) : super(key: key);
 
   final List<RubyTextData> data;
@@ -129,30 +130,37 @@ class RubyText extends StatelessWidget {
   final bool? softWrap;
   final TextOverflow? overflow;
   final int? maxLines;
+  final VoidCallback? onPressed;
 
   @override
-  Widget build(BuildContext context) => Text.rich(
-        TextSpan(
-          children: data
-              .map<InlineSpan>(
-                (RubyTextData data) => WidgetSpan(
-                  child: RubySpanWidget(
-                    data.copyWith(
-                      style: style,
-                      rubyStyle: rubyStyle,
-                      textDirection: textDirection,
+  Widget build(BuildContext context) => GestureDetector(
+    onTap: onPressed,
+    child: Text.rich(
+          TextSpan(
+            children: data
+                .map<InlineSpan>(
+                  (RubyTextData data) => WidgetSpan(
+                    child: GestureDetector(
+                      onTap: data.onPressed,
+                      child: RubySpanWidget(
+                        data.copyWith(
+                          style: style,
+                          rubyStyle: rubyStyle,
+                          textDirection: textDirection,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              )
-              .toList(),
+                )
+                .toList(),
+          ),
+          textAlign: textAlign,
+          textDirection: textDirection,
+          softWrap: softWrap,
+          overflow: overflow,
+          maxLines: maxLines,
         ),
-        textAlign: textAlign,
-        textDirection: textDirection,
-        softWrap: softWrap,
-        overflow: overflow,
-        maxLines: maxLines,
-      );
+  );
 }
 
 double _measurementWidth(

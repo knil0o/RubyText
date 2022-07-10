@@ -1,7 +1,7 @@
-name: ruby_text
-description: A RubyText widget, you can easily use this library to achieve the furigana effect.
-version: 3.0.1
-homepage: https://github.com/YeungKC/RubyText
+name: ruby_text_touch
+description: A RubyText widget with touch callback, you can easily use this library to achieve the furigana effect.
+version: 0.0.2
+homepage: https://github.com/knil0o/RubyText
 
 environment:
   sdk: ">=2.14.0 <3.0.0"

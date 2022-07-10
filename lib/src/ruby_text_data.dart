@@ -8,6 +8,7 @@ class RubyTextData extends Equatable {
     this.style,
     this.rubyStyle,
     this.textDirection = TextDirection.rtl,
+    this.onPressed,
   });
 
   final String text;
@@ -15,6 +16,7 @@ class RubyTextData extends Equatable {
   final TextStyle? style;
   final TextStyle? rubyStyle;
   final TextDirection textDirection;
+  final VoidCallback? onPressed;
 
   @override
   List<Object?> get props => [

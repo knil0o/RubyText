@@ -1,31 +1,5 @@
-## [3.0.1]
+## [0.0.2]
+fix touch bugs
 
-fix RubyTextData.copyWith.
-
-## [3.0.0]
-
-1. Add cache to improve performance.
-
-2. Remove onTap
-
-3. Add RubySpanWidget
-
-## [2.0.2]
-
-Update README.md.
-
-## [2.0.1]
-
-Fixe style.
-
-## [2.0.0]
-
-migrated to null safety.
-
-## [1.0.1]
-
-update LICENSE.
-
-## [1.0.0]
-
+## [0.0.1]
 init project.
